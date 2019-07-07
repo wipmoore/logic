@@ -183,11 +183,10 @@ A compound proposition is unsatisfiable if every assignment of truth values to i
 
 ## Logical equivalence
 
-If you have an expression with n variables the maximum number of outcomes is 2^n.  The compound propositions P  and Q are called logically equivalent if P ↔ Q is a tautology.  Basically this mean that you can have an unlimited number of formula in a compound proposition but the outcomes can only be 2^n.  Two compound propositions P and Q are logically equivalent if they have the same truth table.
+If you have an expression with n variables the maximum number of outcomes is 2^n.  The compound propositions P and Q are called logically equivalent if P ↔ Q is a tautology.  Basically this mean that you can have an unlimited number of formula in a compound proposition but the outcomes can only be 2^n.  Two compound propositions P and Q are logically equivalent if they have the same truth table.
 
 
 ## Identity
-
 
 - P ∧ T ≡ P
 - P ∨ F ≡ P
@@ -219,7 +218,7 @@ If you have an expression with n variables the maximum number of outcomes is 2^n
 ## Commutative
 
 - P ∨ Q ≡ Q ∨ P
-- P ∧ Q ≡ Q ∧ Q
+- P ∧ Q ≡ Q ∧ P
 
 
 ## Distributive
