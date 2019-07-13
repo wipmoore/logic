@@ -2,7 +2,7 @@
 
 ## Reasoning and Logic
 
-Rationality is the quality or state of being rational, that is the being based on agreeable reason. It implies the conformity of ones beliefs with one's reason to believe and ones actions with ones reason for action.  Logic is the systematic study of the form of an argument.
+Rationality is the quality or state of being rational, that is being based on agreeable reason. It implies the conformity of ones beliefs with one's reason to believe and ones actions with ones reason for action.  Logic is the systematic study of the form of an argument.
 
 
 ## Properties of a system of logic
@@ -10,15 +10,15 @@ Rationality is the quality or state of being rational, that is the being based o
 - Completeness : If a formula is true it can be proven in the system
 - Consistency  : No theorem contradicts another theorem in the system
 - Expressive   : The breadth of concepts that can be expressed in the system
-- Soundness    : If an formula is theorem of the system it is true.
-                 This is the convers of Completness
+- Soundness    : If a formula is a theorem of the system it is true.
+                 This is the converse of Completness
 - Validity     : Valid formulas can not make false inferences from true premises
 
 ## Semantics
 
 The validity of an argument depends on the meaning ( semantics ) of the sentences that make it up.
 
-Note - This is quite and in depth concept.
+Note - This is quite an in depth concept.
 
 
 ## Inference and Implication
@@ -62,7 +62,7 @@ First order logic uses quantified variables over non logical objects and allows 
 
 #### Second-order logic
 
-Is an extension to first order logic, in first order logic quantifies only qualify variable that range over an individual in second order logic allows quantifiers over relations.  e.g. ∀P∀x( x ∈ P ∨ x ∉ P ) for every unary relation P of individuals and every individual x either x is in P or it is not.  This is the basis for type theory.
+Is an extension to first order logic, in first order logic quantifies only qualify variable that range over an individual where as second order logic allows quantifiers over relations.  e.g. ∀P∀x( x ∈ P ∨ x ∉ P ) for every unary relation P of individuals and every individual x either x is in P or it is not.  This is the basis for type theory.
 
 
 ### Modal
