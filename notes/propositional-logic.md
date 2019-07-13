@@ -113,6 +113,17 @@ An implication means the following properties hold true:
 You are asserting that if you have the antecedent you will have the consequent but if you have the consequent it does not mean that you have the antecedent, there may be other conditions that result in the antecedent being true.
 
 
+Notes: 
+    - P → Q       ≢ Q → P
+    - (P → Q) → R ≢ P → (Q → R)  
+
+
+## Bi-implication
+
+P ↔ Q       ≡ Q ↔ P 
+(P ↔ Q) ↔ R ≡ P ↔ (Q ↔ R)
+
+
 ## Logical Operators
 
 In order of precedence 
@@ -183,7 +194,10 @@ A compound proposition is unsatisfiable if every assignment of truth values to i
 
 ## Logical equivalence
 
-If you have an expression with n variables the maximum number of outcomes is 2^n.  The compound propositions P and Q are called logically equivalent if P ↔ Q is a tautology.  Basically this mean that you can have an unlimited number of formula in a compound proposition but the outcomes can only be 2^n.  Two compound propositions P and Q are logically equivalent if they have the same truth table.
+- The compound propositions P and Q are called logically equivalent if P ↔ Q is a tautology.  
+- Two compound propositions P and Q are logically equivalent if they have the same truth table.
+- If you have an expression with n variables the maximum number of outcomes is 2^n.  
+- A compound expression with an unlimited number of formula will only have 2^n outcomes.
 
 
 ## Identity
@@ -232,7 +246,177 @@ If you have an expression with n variables the maximum number of outcomes is 2^n
 - P ∧ (Q ∧ R) ≡ (P ∧ Q) ∧ R
 - P ∨ (Q ∨ R) ≡ (P ∨ Q) ∨ R
 
-## Symbols unicode references
+
+## Demorgans Laws
+
+¬(P ∧ Q) ≡ ¬P ∨ ¬Q
+¬(P ∨ Q) ≡ ¬P ∧ ¬Q
+
+
+## Absorption
+
+
+_P ∨ ( P ∧ Q ) ≡ P_
+
+- If P is false P ∧ Q is always false
+- If Q is false it depends on the value of P
+
+Q is absorbed by P 
+
+
+## ??
+
+_P ∨ ( ¬P ∧ Q ) ≡ P ∨ Q_
+
+- If P is true then the statement is true
+- If P is false then the statement depends on Q
+
+
+## Replacement
+
+P → Q   ≡ ¬P ∨ Q
+        ≡ ¬Q → ¬P
+
+You must have Q if you have P so if you do not have Q you can not have P.
+
+
+P ↔ Q   ≡ ¬P ↔ ¬Q
+        ≡ (P → Q) ∧ (Q → P)
+        ≡ (¬P ∧ ¬Q ) ∨ (P ∧ Q)
+
+
+## Simplification example
+
+¬(P ∨ (¬P ∧ Q)) ≡ ¬P ∧ ¬(¬P ∧ Q)        Demorgan
+                ≡ ¬P ∧ (¬¬P ∨ ¬Q)       Demorgan 
+                ≡ ¬P ∧ (P ∨ ¬Q)         Involution
+                ≡ (¬P ∧ P) ∨ (¬P ∧ ¬Q)  Distribution
+                ≡ F ∨ (¬P ∧ ¬Q)         Negation
+                ≡ ¬P ∧ ¬Q               Identity
+
+
+## Alternative notation
+
+- P + Q ≡ P ∨ Q
+- PQ    ≡ P ∧ Q
+- ¬P    ≡ P′
+
+
+## Valid argument
+
+An argument has a set of statements that are propositions where the last statement is known as the conclusion and the others are the premises.
+
+- Statement 1   ( Premise )
+- Statement 2   ( Premise )
+- Statement 3   ( Conclusion )
+
+An argument is said to be valid if it conclusions is an natural consequence of its premises, that is if it premises are true then the conclusion must be true.  An argument with false premises can still be valid so long as if the premises were true the conclusion would be a logical consequence.  An argument is valid if its truth table is a tautology.
+
+
+## Sound argument
+
+A sound argument is one that is valid and all its premises are true. Note just because an argument is sound does not mean it is convincing.
+
+
+## Logic as a form of reasoning
+
+- Humans use inductive argument:
+    - Facts
+    - Relevance of statements
+    - Sensibility
+    - We relate date within the world we know
+
+- Machines use material logic ( logic that is valid within a domain of discourse ) :
+    - Argument is valid if it follows the rules of inference
+    - Machines do not care about relevance
+
+
+## Rules of inference
+
+- Modus ponens          : (P → Q) ∧ P        ⇒  Q
+- Modus tollens         : (P → Q) ∧ ¬Q       ⇒  ¬P
+- Hypothesis Syllogism  : (P → Q) ∧ (Q → R)  ⇒  P → R
+- Disjunction Syllogism : (P ∨ Q) ∧ ¬P       ⇒  Q
+- Resoltution           : (P ∨ Q) ∧ (¬P ∨ R) ⇒  Q ∨ R 
+
+
+## Fallacies
+
+- Affirming the consequent    : P → Q ∧ Q    ⇒  P
+- Denying the antecedent      : (P → Q) ∧ ¬P ⇒  ¬Q
+
+
+## Well formed formula (WFF)
+
+- Readable
+- Has no ambiguity
+
+e.g.
+
+- ¬P ∧ Q → R is ambiguous is it _(¬P ∧ Q) → R_ or _¬P ∧ (Q → R)_
+
+1. A single proposition is a WFF
+1. If a formula P is a WFF the ¬P is a WFF
+1. If P and Q are WFF (P ∧ Q), (P ∨ Q), (P → Q), (P ↔ Q) are WFF
+
+
+## NAND
+
+|  P  |  Q  | P ↑ Q |
+|-----|-----|-------|
+|  T  |  T  |   F   |
+|  T  |  F  |   T   |
+|  F  |  T  |   T   |
+|  F  |  F  |   T   |
+
+
+## NOR
+
+|  P  |  Q  | P ↓ Q |
+|-----|-----|-------|
+|  T  |  T  |   F   |
+|  T  |  F  |   F   |
+|  F  |  T  |   F   |
+|  F  |  F  |   T   |
+
+
+## Functionally complete set
+
+A set of connectives that any circuit can be designed with:
+
+- ∧, ∨, ¬
+- ∧, ¬
+- ∨, ¬
+- ↑     : ( is minimal )
+- ↓     : ( is minimal )
+
+
+## Formula
+
+- Tautology     : is always true
+- Contradiction : is never true
+- Satisfiable   : at least once
+
+- Solved via:
+    - Truth tables
+
+- Normal forms:
+    - Disjunctive normal form
+        - Sum of products
+        - (P ∧ Q) ∨ (¬P ∧ Q)
+
+
+## Converse | Inverse | Contrapositive
+
+_P → Q_
+
+- converse          : Q → P
+- inverse           : ¬Q → ¬P
+- contrapositive    : ¬Q → ¬P
+
+__Note__ The above propositions are not rules they are examples of the concepts applied to P → Q
+
+## Symbols Unicode references
 
 ∀ - 2200
 ∃ - 2203
@@ -246,3 +430,7 @@ If you have an expression with n variables the maximum number of outcomes is 2^n
 → - 2192
 ↔ - 2194
 ≡ - 2261
+′ - 2032
+⇒ - 21d2
+↑ - 2191
+↓ - 2193
