@@ -5,6 +5,28 @@
 Rationality is the quality or state of being rational, that is being based on agreeable reason. It implies the conformity of ones beliefs with one's reason to believe and ones actions with ones reason for action.  Logic is the systematic study of the form of an argument.
 
 
+## Fundamental laws
+
+Traditionally there were though to be three fundamental law of logic that governed the way we though:
+
+- The law of contradiction
+- The law of the excluded middle
+- The principle of identity
+
+
+- The law of contradiction
+    - For all propositions P it is impossible for P to be both true and false.
+
+- The law of the excluded middle
+    - Any proposition P must be either true or false there is no other state.
+
+- The principle of identity
+    - A thing is identical with itself _∀x(x=x))_
+
+
+Recently there have been logical approaches that relaxed some of these law such as Intuitionistic logic.
+
+
 ## Properties of a system of logic
 
 - Completeness : If a formula is true it can be proven in the system
